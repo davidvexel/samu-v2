@@ -38,24 +38,14 @@ class User extends Authenticatable implements MustVerifyEmail, TwoFactorAuthenti
     public const TYPE_USER = 'user';
 
     /**
-     * The attributes that are mass assignable.
+     * The attributes that are not mass assignable.
      *
      * @var array
      */
-    protected $fillable = [
-        'type',
-        'name',
-        'email',
-        'email_verified_at',
-        'password',
-        'password_changed_at',
-        'active',
-        'timezone',
-        'last_login_at',
-        'last_login_ip',
-        'to_be_logged_out',
-        'provider',
-        'provider_id',
+    protected $guarded = [
+        'id',
+	    'remember_token',
+	    'deleted_at',
     ];
 
     /**

@@ -30,6 +30,11 @@
                 </tr>
 
                 <tr>
+                    <th>@lang('Last Name')</th>
+                    <td>{{ $user->last_name }}</td>
+                </tr>
+
+                <tr>
                     <th>@lang('E-mail Address')</th>
                     <td>{{ $user->email }}</td>
                 </tr>
